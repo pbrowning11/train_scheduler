@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>Train Scheduler</title>
+</head>
+
+<body background="assets/images/Train-Background.jpg">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+
+    <div class="container">
+        <div class="jumbotron text-center bg-secondary text-white">
+            <h1 class="display-4">Train Scheduler</h1>
+            <p class="lead">Train scheudle below. Add a new train with the form below.</p>
+        </div>
+
+        <div class="card border border-secondary">
+
+            <h5 class="card-header border border-secondary bg-secondary text-white font-weight-bold py-4">
+                Train Schedule
+            </h5>
+
+            <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody class="trainTable">
+        
+                    </tbody>
+                </table>
+        </div>
+
+        <br>
+
+        <div class="card border border-secondary">
+
+            <h5 class="card-header bg-secondary text-white font-weight-bold py-4">
+                Add a Train
+            </h5>
+
+            <div class="card-body px-lg-5 pt-3">
+
+                <form>
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input class="form-control" id="trainName" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input class="form-control" id="destination" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="trainTime">First Train Time (HH:mm - military time)</label>
+                        <input class="form-control" id="trainTime" placeholder="Train Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input class="form-control" id="frequency" placeholder="Frequency">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
